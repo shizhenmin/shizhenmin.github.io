@@ -8,6 +8,8 @@
 # Site settings
 title: shizhenmin
 brief-intro: 
+home-welcome:
+small-welcome:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shizhenmin.github.io" # the base hostname & protocol for your site
 
