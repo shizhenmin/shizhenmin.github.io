@@ -23,6 +23,7 @@
     <!-- <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
   </body>
 
+  <!-- simple-jekyll-search -->
   <script src="{{ site.baseurl }}/js/simple-jekyll-search.js"></script>
 
   <script>
@@ -38,5 +39,17 @@
     })
   </script>
 
-    <script src="{{ site.baseurl }}/js/prism.js"></script>
+  <!-- prism code highlight -->
+  <script src="{{ site.baseurl }}/js/prism.js"></script>
+
+  <!-- mathjax -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 </html>
