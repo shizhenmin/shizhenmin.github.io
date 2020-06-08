@@ -1,0 +1,160 @@
+===============================================
+blog_github 2.4
+Date: 2020-05-10
+===============================================
+
+1、增加了显示数学公式的功能
+2、设置图片居中
+3、设置表格居中
+4、增加更新信息文件
+
+--------------------------------
+
+_layouts\default.html
+    增加显示数学公式的javascript代码
+
+_sass\_post.scss
+    设置图片居中
+
+_sass\_reset.scss
+    设置表格居中
+
++ Update.txt
+    增加该文件，记录各次更新的修改内容
+
+
+
+===============================================
+blog_github 2.3
+Date: 2020-04-05
+===============================================
+
+1、修改了代码框 <code> 和 <pre> 的样式
+2、增加了代码框 <pre> 的显示行号功能
+
+--------------------------------
+
+_layouts\default.html
+    增加显示行号的javascript代码
+
+_sass\_page.scss
+    增大网页半屏显示时的宽度
+
+_sass\_syntax-highlighting.scss
+    修改代码框背景色
+
++ _sass\prism.scss
+    增加该文件，修改代码框样式
+
++ js\prism.js
+    增加该文件，实现代码框显示行号的功能
+
+css\main.scss
+    删除没有用到的css文件的引用
+
+_layouts\demo.html     ->  _layouts\#demo.html
+_layouts\page.html     ->  _layouts\#page.html
+_sass\_demo.scss       ->  _sass\#_demo.scss
+_sass\_layout.scss     ->  _sass\#_layout.scss
+_sass\_post-old.scss   ->  _sass\#_post-old.scss
+js\asonry.pkgd.min.js  ->  js\#masonry.pkgd.min.js
+js\waterfall.js        ->  js\#waterfall.js
+    重命名上述文件，因为这些文件应该没有用到
+
+
+
+===============================================
+blog_github 2.2
+Date: 2020-03-31
+===============================================
+
+主要增加了博客的搜索功能
+
+--------------------------------
+
++ search.json
+    增加该文件，搜索标题、类别、tags、内容等
+
+_includes\header.html
+    增加搜索框
+
+_layouts\default.html
+    增加搜索的javascript代码
+
+_sass\_header.scss
+    修改搜索框样式
+
++ js\simple-jekyll-search.js
+    增加该文件，实现搜索功能的javascript脚本
+
+
+
+===============================================
+blog_github 2.1
+Date: 2020-03-21
+===============================================
+
+主要增加了博客的logo
+
+--------------------------------
+
+_config.yml
+    增加两个与网页简介有关的变量
+
+index.html
+    使用两个与网页简介有关的变量，现在要改简介，只要在 _config.yml 里改就可以了
+
++ favicon.ico
+    增加博客的logo
+
+
+
+===============================================
+blog_github 2.0
+Date: 2020-03-01
+===============================================
+
+主要修改了博客的个人信息
+
+--------------------------------
+
+_config.yml
+    修改个人信息
+    注释掉流量统计功能的代码
+    注释掉评论功能的代码
+    加入 jekyll-paginate 插件
+    加入配置，使博客文章默认为post布局
+
+index.html
+    新标签页打开网页
+
+_includes\category.html
+    新标签页打开网页
+
+_includes\footer.html
+    注释掉流量统计功能的代码
+    删除源代码中的原博客信息
+
+_includes\tag.html
+    新标签页打开网页
+
+_layouts\post.html
+    注释掉评论功能的代码
+
+_sass\_reset.scss
+    缩小页面下方footer的高度
+
+css\main.scss
+    删除无关代码
+
+- favicon.ico
+- feed.xml
+- LICENSE
+- README.md
+- page\3collections.md
+- page\3demo.html
+- page\4about.md
+    删除这7个文件
+
+
+
