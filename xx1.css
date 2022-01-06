@@ -10,10 +10,9 @@ button {
     background-color:#f3f4f6;
     border: none;
     /* width: 80%; */
-    width: 100%;
     margin: 0.4em;
     text-align: left;
-    padding: 5% 5%;
+    padding: 10% 10%;
     font-size: 1em;
     word-wrap: break-word;
 }
@@ -21,6 +20,7 @@ button {
 .tigan {
     padding-top: 10%;
     width: 100%;
-    margin: 5%
+    margin: 5%;
+    padding: 10% 10%;
 }
 
