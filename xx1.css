@@ -11,7 +11,7 @@ button {
     border: none;
     /* width: 80%; */
     height: 3em;
-    width: 90%;
+    width: 100%;
     margin: 0.4em;
     text-align: left;
     padding: 5% 5%;
@@ -20,7 +20,7 @@ button {
 
 .tigan {
     padding-top: 10%;
-    width: 80%;
+    width: 100%;
     margin: 5%
 }
 
