@@ -22,7 +22,7 @@ html,body{
     font-size: large;
     float: left;
 }
-#export{
+#show{
     font-size: large;
     float: left;
     width: 50%;
@@ -30,7 +30,7 @@ html,body{
     background-color: #f74e75;
     color: white;
 }
-#show{
+#export{
     font-size: large;
     float: left;
     width: 50%;
@@ -43,7 +43,7 @@ html,body{
     background-color: white;
     width: 92%;
     margin: auto;
-    font-size: 1.5em;
+    font-size: 1.1em;
     border-radius: 25px;
     padding-top: 1%;
     height:70%;
