@@ -1,4 +1,4 @@
-/* @media screen and (max-width:1200px) and (min-width: 770px) { */
+@media screen and (max-width:1200px) and (min-width: 770px) {
 html,body{
     height:100%;
     background-color: #4671f8;
@@ -19,16 +19,16 @@ html,body{
 }
 
 #show{
-    font-size: 56px;
+    font-size: large;
     float: left;
 }
 
 #input{
-    font-size: 56px;
+    font-size: large;
     float: left;
 }
 #export{
-    font-size: 56px;
+    font-size: large;
     float: left;
 }
 
@@ -36,9 +36,10 @@ html,body{
     background-color: white;
     width: 92%;
     margin: auto;
-    font-size: 56px;
+    font-size: 2em;
     border-radius: 25px;
     padding-top: 1%;
+    height:70%;
 }
 
 .tigan{
@@ -58,4 +59,4 @@ html,body{
     font-size: 56px;
 }
 
-/* } */
+}
