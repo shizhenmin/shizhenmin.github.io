@@ -7,8 +7,6 @@ function choose_ans(button) {
         update()
     }else{
         console.log('False')
-        set_wrong(button)
-        setTimeout(() => {set_wrong(button)}, 100);
     }
 }
 
