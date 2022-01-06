@@ -28,6 +28,14 @@ function main(){
     }, false)
 }
 
+function test(){
+    document.getElementById("tigan").innerHTML = '《中华人民共和国社会保险法》第十四条规定，养老保险个人账户不得提前支取，记账利率不得低于银行定期存款利率，免征利息税。个人死亡的，个人账户余额【    】。（出题：人力资源和社会保障部）'
+    document.getElementById('ans1').innerHTML = 'A．纳入养老保险基金'
+    document.getElementById('ans2').innerHTML = 'B．可以继承'
+    document.getElementById('ans3').innerHTML = 'C．自动归零'
+    document.getElementById('ans4').innerHTML = '十四条规定，养老保险个人账户不得提前支取，记账利率不得低'
+}
+
 function update(){
     // 刷新题目
     // console.log(times)
