@@ -1,20 +1,26 @@
 
+@media screen and (max-width:1200px) and (min-width: 770px) {
+    .page {
+        width: 80%;
+        font-size: 42px;
+    }
+}
+
 button {
     background-color:#f3f4f6;
     border: none;
-    width: 80%;
-    /* height: 2em; */
-    margin: 2em;
+    /* width: 80%; */
+    height: 3em;
+    width: 90%;
+    margin: 0.4em;
     text-align: left;
-    padding-left: 1.5em;
+    padding: 5% 5%;
     font-size: 1em;
 }
 
 .tigan {
+    padding-top: 10%;
     width: 80%;
-}
-
-.all {
-    font-size: 3em;
+    margin: 5%
 }
 
