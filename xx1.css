@@ -2,7 +2,7 @@
 @media screen and (max-width:1200px) and (min-width: 770px) {
     .page {
         width: 80%;
-        font-size: 42px;
+        font-size: 46px;
     }
 }
 
@@ -13,7 +13,7 @@ button {
     width: 100%;
     margin: 0.4em;
     text-align: left;
-    padding: 10% 10%;
+    padding: 2% 10%;
     font-size: 1em;
     word-wrap: break-word;
 }
