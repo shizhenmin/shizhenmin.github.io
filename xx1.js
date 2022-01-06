@@ -3,10 +3,13 @@ function choose_ans(button) {
     console.log(user_ans)
     if (user_ans == ans){
         console.log('True')
-        setTimeout(() => {set_right(button)}, 100);
-        update()
+        // setTimeout(() => {set_right(button)}, 100);
+        set_right(button)
+        setTimeout(() => {update()}, 500);
+        // update()
     }else{
         console.log('False')
+        setTimeout(() => {set_wrong(button)}, 100);
     }
 }
 
@@ -61,12 +64,20 @@ function update(){
     document.getElementById("tigan").innerHTML = tigan
     // 隐藏几个选项
     document.getElementById('ans1').style.display = "none"
+    document.getElementById('ans1').style.backgroundColor = "#f3f4f6"
+    document.getElementById('ans1').style.color = "#000000"
     ans1 = ''
     document.getElementById('ans2').style.display = "none"
+    document.getElementById('ans2').style.backgroundColor = "#f3f4f6"
+    document.getElementById('ans2').style.color = "#000000"
     ans2 = ''
     document.getElementById('ans3').style.display = "none"
+    document.getElementById('ans3').style.backgroundColor = "#f3f4f6"
+    document.getElementById('ans3').style.color = "#000000"
     ans3 = ''
     document.getElementById('ans4').style.display = "none"
+    document.getElementById('ans4').style.backgroundColor = "#f3f4f6"
+    document.getElementById('ans4').style.color = "#000000"
     ans4 = ''
     // 选项延迟出现
     setTimeout(() => {show_options(timu_list[index].options)}, 300);
