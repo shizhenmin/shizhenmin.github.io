@@ -3,11 +3,25 @@ function choose_ans(button) {
     console.log(user_ans)
     if (user_ans == ans){
         console.log('True')
+        setTimeout(() => {set_right(button)}, 100);
         update()
     }else{
         console.log('False')
+        set_wrong(button)
+        setTimeout(() => {set_wrong(button)}, 100);
     }
 }
+
+function set_right(button){
+    button.style.backgroundColor="#3ed091"
+    button.style.color='white'
+}
+
+function set_wrong(button){
+    button.style.backgroundColor="#f44f77"
+    button.style.color='white'
+}
+
 
 timu_list = []
 ans = ''
