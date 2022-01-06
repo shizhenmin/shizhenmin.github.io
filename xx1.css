@@ -2,26 +2,22 @@
 @media screen and (max-width:1200px) and (min-width: 770px) {
     .page {
         width: 80%;
-        font-size: 48px;
+        font-size: 56px;
+        padding-top: 8%;
+        /* width: 100%; */
+        /* margin: 5%; */
+        padding: 10% 10%;
     }
 }
 
 button {
     background-color:#f3f4f6;
     border: none;
-    /* width: 80%; */
     width: 100%;
-    margin: 2% 2% 2% 10%;
+    margin: 2% 0%;
     text-align: left;
     padding: 3% 10%;
     font-size: 1em;
     word-wrap: break-word;
-}
-
-.tigan .options {
-    padding-top: 10%;
-    width: 100%;
-    margin: 5%;
-    padding: 10% 10%;
 }
 
