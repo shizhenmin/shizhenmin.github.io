@@ -67,6 +67,14 @@ function main(){
     }, false)
 }
 
+var url = "http://10.22.19.150:8080/timer/resources/test.txt";
+var htmlobj= $.ajax({url:url,async:false});
+var dataString = htmlobj.responseText;
+var data = eval("("+ dataString +")");//转换为json对象();
+var status = data["status"];
+var personScoreList = data["list"];
+
+
 
 function parse_txt(content){
     timu_list = []
@@ -260,19 +268,66 @@ function export_file(){
     }
     filecontent = timu_array.join("\n")
 
-    // var aEle = document.createElement("a");// 创建a标签
-    // blob = new Blob([filecontent]); 
-    // aEle.download = "timu.txt";// 设置下载文件的文件名
-    // aEle.href = URL.createObjectUrl(blob);
-    // aEle.click();// 设置点击事件
-    let uri = 'data:text/csv;charset=utf-8,\ufeff'+encodeURIComponent(filecontent);
-    let link = document.createElement('a');
-    link.href = uri;
-    link.download = 'atimuout.txt';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // let uri = 'data:text/csv;charset=utf-8,\ufeff'+encodeURIComponent(filecontent);
+    // let link = document.createElement('a');
+    // link.href = uri;
+    // link.download = 'tiku.txt';
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+
+
+    let alink = document.createElement("a");
+    // 解决中文乱码的问题，标识该字节流的字节序
+    let _utf = "\uFEFF";
+    const bw = this.browser();
+    if (bw["edge"] || !bw["ie"]) {
+      // Blob IE>=10 都支持，不能作为判断依据
+      if (window.Blob && window.URL && window.URL.createObjectURL) {
+        // DOMStrings会被编码为UTF-8，utf-8保存的csv格式要让Excel正常打开的话，必须加入在文件最前面加入BOM(Byte order mark)
+        const csvDataBlob = new Blob([_utf + filecontent], {
+          type: "text/csv",
+        });
+        //会产生一个类似 blob:http://localhost:8083/5a2d03ec-cbdf-4ea9-be0c-f837ed35a9be 这样的URL字符串, 
+        //可以像使用普通 URL 那样使用它，比如用在 img.src 上。
+        alink.href = URL.createObjectURL(csvDataBlob); 
+      }
+      document.body.appendChild(alink);
+      alink.setAttribute("download", 'tiku.txt');
+      alink.click();
+      document.body.removeChild(alink);
+    } else if (bw["ie"] >= 10) {
+      const csvDataBlob = new Blob([_utf + filecontent], {
+        type: "text/csv",
+      });
+      navigator.msSaveBlob(csvDataBlob, 'tiku.txt');
+    }
+
 }
+
+function browser(){
+    let Sys = {};
+    let ua = navigator.userAgent.toLowerCase();
+    let s;
+    (s =
+      ua.indexOf("edge") !== -1
+        ? (Sys.edge = "edge")
+        : ua.match(/rv:([\d.]+)\) like gecko/))
+      ? (Sys.ie = s[1])
+      : (s = ua.match(/msie ([\d.]+)/))
+      ? (Sys.ie = s[1])
+      : (s = ua.match(/firefox\/([\d.]+)/))
+      ? (Sys.firefox = s[1])
+      : (s = ua.match(/chrome\/([\d.]+)/))
+      ? (Sys.chrome = s[1])
+      : (s = ua.match(/opera.([\d.]+)/))
+      ? (Sys.opera = s[1])
+      : (s = ua.match(/version\/([\d.]+).*safari/))
+      ? (Sys.safari = s[1])
+      : 0;
+    return Sys;
+}
+
 
 function change_color() {
     // 点击隐藏选项时改变字体颜色
