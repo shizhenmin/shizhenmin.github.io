@@ -31,6 +31,8 @@ html,body{
     background-color: #f74e75;
     color: white;
     text-align: center;
+    padding: 0% 0% 0% 0%;
+    height: 25%;
 }
 #export{
     font-size: large;
@@ -40,6 +42,8 @@ html,body{
     background-color: #413db5;
     color: white;
     text-align: center;
+    padding: 0% 0% 0% 0%;
+    height: 25%;
 }
 .button3{
     font-size: large;
@@ -53,7 +57,8 @@ html,body{
     border-color: #f0c020;
     color: white;
     text-align: center;
-    padding: 3%;
+    padding: 0% 0% 0% 0%;
+    height: 25%;
 }
 
 #info {
