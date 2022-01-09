@@ -177,7 +177,7 @@ function by_accuracy(){
     for (var ind = 0; ind < tmp.length; ind++){
         order.push(tmp[ind].key)
     }
-    console.log("order\t", order)
+    // console.log("order\t", order)
     // 改按钮颜色
     document.getElementById('by_accuracy').style.backgroundColor = "#f0c020"
     document.getElementById('by_random').style.backgroundColor = "#f74e75"
@@ -199,7 +199,7 @@ function by_random(){
     // index = Math.floor(Math.random()*(timu_list.length-1))
     by_order()
     order.sort(function(){ return 0.5 - Math.random(); }); 
-    console.log("order\t", order)
+    // console.log("order\t", order)
     // 改按钮颜色
     document.getElementById('by_accuracy').style.backgroundColor = "#f74e75"
     document.getElementById('by_random').style.backgroundColor = "#f0c020"
@@ -213,7 +213,7 @@ function by_order(){
     order = []
     // console.log("timu_list.length\t", timu_list.length)
     order = Array.from(Array(timu_list.length-1), (v,k) =>k);
-    console.log("order\t", order)
+    // console.log("order\t", order)
     // 改按钮颜色
     document.getElementById('by_accuracy').style.backgroundColor = "#f74e75"
     document.getElementById('by_random').style.backgroundColor = "#f74e75"
@@ -356,9 +356,9 @@ function Timu(tigan, options, ans, all_time, right_time, accuracy, index) {
     this.tigan = tigan;
     this.options = options;
     this.ans = ans;
-    this.all_time = all_time;
-    this.right_time = right_time;
-    this.accuracy = accuracy;
+    this.all_time = Number(all_time);
+    this.right_time = Number(right_time);
+    this.accuracy = Number(accuracy);
     this.index = index;
 
     this.update_accuracy = update_accuracy
