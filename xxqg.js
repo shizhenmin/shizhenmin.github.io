@@ -8,7 +8,11 @@ function choose_ans(button) {
         set_right(button)
         console.log("all_time:\t", timu_list[index].all_time)
         console.log("right_time:\t", timu_list[index].right_time)
-        setTimeout(() => {update()}, 500);  // 答对后开始新的题
+        document.getElementById('ans1').disabled = true
+        document.getElementById('ans2').disabled = true
+        document.getElementById('ans3').disabled = true
+        document.getElementById('ans4').disabled = true
+            setTimeout(() => {update()}, 500);  // 答对后开始新的题
         // update()
     }else{
         console.log("回答错误")
@@ -235,15 +239,19 @@ function show_options(options){
         ans3 = options[2]
         ans4 = options[3]
     }
+    document.getElementById('ans1').disabled = false
     document.getElementById('ans1').style.display = "block"
     document.getElementById('ans1').innerHTML = ans1
+    document.getElementById('ans2').disabled = false
     document.getElementById('ans2').style.display = "block"
     document.getElementById('ans2').innerHTML = ans2
     if (ans3 != ''){
+        document.getElementById('ans3').disabled = false
         document.getElementById('ans3').style.display = "block"
         document.getElementById('ans3').innerHTML = ans3
     }
     if (ans4 != ''){
+        document.getElementById('ans4').disabled = false
         document.getElementById('ans4').style.display = "block"
         document.getElementById('ans4').innerHTML = ans4
     }
