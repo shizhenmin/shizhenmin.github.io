@@ -102,6 +102,7 @@ function parse_txt(content){
             if(number != 0){
                 accuracy = right_time / all_time
                 var timu=new Timu(tigan, options, ans, all_time, right_time, accuracy, number);
+                timu.update_accuracy()
                 timu_list.push(timu)
                 // console.log(timu)
             }
@@ -116,6 +117,7 @@ function parse_txt(content){
     // 补上最后一题
     accuracy = right_time / all_time
     var timu=new Timu(tigan, options, ans, all_time, right_time, accuracy, number);
+    timu.update_accuracy()
     timu_list.push(timu)
     // console.log(timu)
 }
@@ -363,6 +365,10 @@ function Timu(tigan, options, ans, all_time, right_time, accuracy, index) {
 
     this.update_accuracy = update_accuracy
     function update_accuracy() {
-        this.accuracy = this.right_time / this.all_time
+        if (this.all_time == 0) {
+            this.accuracy = 0
+        } else {
+            this.accuracy = this.right_time / this.all_time
+        }
     }
 }
