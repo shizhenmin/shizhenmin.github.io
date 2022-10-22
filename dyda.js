@@ -34,13 +34,14 @@ function by_order(){
     let result = ''
     for (var ind = 0; ind < person_list.length - 1; ind++){
         if (search_str == person_list[ind].name){
-            console.log("search_str", search_str)
-            console.log("person_list[ind]", person_list[ind])
-            console.log("person_list[ind].name", person_list[ind].name)
+            // console.log("search_str", search_str)
+            // console.log("person_list[ind]", person_list[ind])
+            // console.log("person_list[ind].name", person_list[ind].name)
             result = result + "姓名: " + person_list[ind].name + "\n"
             result = result + "党员编号: " + person_list[ind].id + "\n"
-            result = result + "身份证号码: " + person_list[ind].sfz + "\n"
-            result = result + "现所在支部: " + person_list[ind].zb + "\n\n"
+            // result = result + "身份证号码: " + person_list[ind].sfz + "\n"
+            // result = result + "现所在支部: " + person_list[ind].zb + "\n"
+            result = result + "\n"
         }
     }
     // document.getElementById("info").innerHTML = result
@@ -58,8 +59,8 @@ function parse_txt(content){
         // console.log("item", item)
         name = item[0]
         id = item[1]
-        sfz = item[2]
-        zb = item[3]
+        sfz = ''
+        zb = ''
         var person=new Person(name, id, sfz, zb)
         person_list.push(person)
         // console.log("person", person)
