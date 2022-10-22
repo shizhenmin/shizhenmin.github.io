@@ -1,0 +1,30 @@
+html,body{
+    height:100%;
+}
+.all{
+    height:100%;
+}
+
+
+
+#input{
+    font-size: large;
+    /* float: left; */
+    margin: 50% 10% 10% 10%;
+    width: 80%;
+    height: 2em;
+}
+
+#by_order{
+    font-size: large;
+    /* float: left; */
+    width: 80%;
+    margin: 10%;
+    background-color: #f74e75;
+    color: white;
+    text-align: center;
+    padding: 0% 0% 0% 0%;
+    height: 25%;
+}
+
+
